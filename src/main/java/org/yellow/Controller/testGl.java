@@ -9,6 +9,8 @@ import javax.swing.*;
 public class testGl extends JFrame implements GLEventListener {
   private Matrix4 Model;
   private Matrix4 View;
+
+    @Override
     public void init(GLAutoDrawable glAutoDrawable) {
         GL4ES3 gl =  glAutoDrawable.getGL().getGL4ES3();
         gl.glEnable(GL.GL_TEXTURE_CUBE_MAP);
@@ -20,15 +22,17 @@ public class testGl extends JFrame implements GLEventListener {
         System.out.println("vendor:" + gl.glGetString(GL.GL_VENDOR));
         System.out.println("version:" + gl.glGetString(GL.GL_VERSION));
     }
-
+    @Override
     public void dispose(GLAutoDrawable glAutoDrawable) {
 
     }
 
+    @Override
     public void display(GLAutoDrawable glAutoDrawable) {
 
     }
 
+    @Override
     public void reshape(GLAutoDrawable glAutoDrawable, int i, int i1, int i2, int i3) {
 
     }
